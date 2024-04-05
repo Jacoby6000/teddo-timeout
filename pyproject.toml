@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "teddo-timeout-bot"
+version = "0.1.1"
+description = "Times out teddo for the configured duration"
+authors = ["Jacob Barber <Jacoby6000@gmail.com>"]
+license = "GPL3"
+readme = "README.md"
+packages = [{include = "teddo_timeout", from="src/"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+discord-py = "^2.3.1"
+argparse = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+autoflake = "^2.2.0"
+mypy = "^1.4.1"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [ "src" ]
